@@ -6,7 +6,6 @@ export const education: Education[] = [
     degree: "Bachelor of Science (B.Sc.) in Computer Science & Engineering",
     institution: "Daffodil International University",
     duration: "2019 – 2024",
-    result: "CGPA: 3.64 / 4.00",
     description:
       "Completed my Bachelor's degree in Computer Science & Engineering. During my studies, I gained strong knowledge in Software Engineering, Data Structures & Algorithms, Database Management Systems, Operating Systems, Computer Networks, Artificial Intelligence, Web Development, and Object-Oriented Programming. This journey strengthened my analytical thinking and software development skills.",
   },

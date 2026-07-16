@@ -2,7 +2,6 @@ interface EducationCardProps {
   degree: string;
   institution: string;
   duration: string;
-  cgpa: string;
   description: string;
 }
 
@@ -10,7 +9,6 @@ export default function EducationCard({
   degree,
   institution,
   duration,
-  cgpa,
   description,
 }: EducationCardProps) {
   return (
