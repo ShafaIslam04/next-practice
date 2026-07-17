@@ -1,8 +1,12 @@
-import Image from "next/image";
+
+
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
+
 import { getBook } from "@/lib/getBook";
+import BookImage from "@/components/BookImage";
+
 
 interface BookDetailsProps {
   params: Promise<{
@@ -13,9 +17,11 @@ interface BookDetailsProps {
 export default async function BookDetailsPage({
   params,
 }: BookDetailsProps) {
+  
   const { id } = await params;
 
   const book = getBook(Number(id));
+  
 
   if (!book) {
     notFound();
@@ -33,13 +39,11 @@ export default async function BookDetailsPage({
 
       <div className="grid gap-10 rounded-3xl border border-violet-100 bg-white p-8 shadow-sm md:grid-cols-2">
 
-        <Image
-          src={book.image}
-          alt={book.title}
-          width={450}
-          height={650}
-          className="w-full rounded-3xl object-cover"
-        />
+       <BookImage src={book.image}
+        alt={book.title}
+        width={300}
+        height={400}
+        className="h-72 w-full rounded-2xl object-cover"/>
 
         <div>
 

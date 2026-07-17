@@ -1,7 +1,8 @@
-import Image from "next/image";
+'use client'
 import Link from "next/link";
 
 import { Book } from "@/types/book";
+import BookImage from "./BookImage";
 
 interface BookCardProps {
   book: Book;
@@ -10,16 +11,15 @@ interface BookCardProps {
 export default function BookCard({
   book,
 }: BookCardProps) {
+  
   return (
     <div className="rounded-3xl border border-violet-100 bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
 
-      <Image
-        src={book.image}
+      <BookImage src={book.image}
         alt={book.title}
         width={300}
         height={400}
-        className="h-72 w-full rounded-2xl object-cover"
-      />
+        className="h-72 w-full rounded-2xl object-cover" />
 
       <div className="mt-5">
 

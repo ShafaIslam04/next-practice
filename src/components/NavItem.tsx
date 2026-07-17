@@ -8,12 +8,14 @@ interface NavItemProps {
   href: string;
   label: string;
   icon: IconType;
+  onClick?:()=>void
 }
 
 const NavItem = ({
   href,
   label,
   icon: Icon,
+  onClick
 }: NavItemProps) => {
   const pathname = usePathname();
   const active = pathname === href;
@@ -21,6 +23,7 @@ const NavItem = ({
   return (
     <Link
       href={href}
+      onClick={onClick}
       className={`group flex items-center gap-4 rounded-2xl px-4 py-3 transition-all duration-300
         ${
           active
