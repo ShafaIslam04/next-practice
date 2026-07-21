@@ -4,19 +4,19 @@ export default function HomePage() {
   return (
     <section className="flex min-h-[85vh] items-center">
       <div className="max-w-4xl">
-        <p className="text-lg font-medium text-violet-600">
+        <p className="text-lg font-medium  text-violet-600">
           Hello, I'm
         </p>
 
-        <h1 className="mt-2 text-5xl font-bold tracking-tight text-slate-800">
+        <h1 className="mt-2 text-5xl font-bold tracking-tight dark:text-foreground text-slate-800">
           Shafa Islam
         </h1>
 
-        <h2 className="mt-4 text-2xl font-semibold text-slate-600">
+        <h2 className="mt-4 text-2xl font-semibold dark:text-foreground text-slate-600">
           Welcome to My Personal Knowledge Hub
         </h2>
 
-        <p className="mt-8 text-lg leading-8 text-slate-600">
+        <p className="mt-8 text-lg leading-8 text-slate-600 dark:text-foreground">
           This website is a collection of my educational journey, favorite
           books, and hobbies. It reflects the knowledge I've gained, the
           ideas that inspire me, and the creative activities I enjoy in my

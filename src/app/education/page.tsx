@@ -3,15 +3,15 @@ import { education } from "@/data/education";
 
 export default function EducationPage() {
   return (
-    <section>
+    <section className="dark:bg-black dark:text-white">
 
-      <div className="mb-10">
+      <div className="mb-10  ">
 
-        <h1 className="text-4xl font-bold text-slate-800">
+        <h1 className="text-4xl font-bold dark:text-foreground text-slate-800">
           Education
         </h1>
 
-        <p className="mt-2 text-slate-500">
+        <p className="mt-2 dark:text-foreground text-slate-500">
           My academic journey and achievements.
         </p>
 

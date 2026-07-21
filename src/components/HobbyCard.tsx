@@ -39,13 +39,12 @@
 // }
 
 import Image from "next/image";
-import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
+
 import {
   Card,
-  CardAction,
+ 
   CardDescription,
-  CardFooter,
+
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
@@ -62,7 +61,7 @@ export default function HobbyCard({
   description,
 }: HobbyCardProps) {
   return (
-      
+      <div className="rounded-3xl border  dark:bg-background dark:text-foreground border-violet-100 bg-white p-8 shadow-sm transition hover:shadow-lg">
       <Card className="relative mx-auto w-full max-w-sm pt-0">
       
         <Image
@@ -81,6 +80,7 @@ export default function HobbyCard({
       </CardHeader>
       
     </Card>
+    </div>
     
 
     

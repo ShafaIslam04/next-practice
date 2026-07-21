@@ -48,6 +48,11 @@ import { Geist } from "next/font/google";
 import { cn } from "@/lib/utils";
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar"
 import { AppSidebar } from "@/components/app-sidebar"
+import { ThemeProvider } from "@/components/theme-provider"
+import {ModeToggle} from "@/components/ModeToggle"
+
+
+ 
 
 
 
@@ -64,25 +69,37 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={cn("font-sans", geist.variable)}>
-      <body className="bg-gray-100">
-      
-        <div className="flex min-h-screen">
-            <TooltipProvider>
-           <SidebarProvider>
-      <AppSidebar />
-      <main className="px-8 py-2">
-        <SidebarTrigger />
-        {children}
-      </main>
-    </SidebarProvider>
-    </TooltipProvider>
-        {/* <main className="flex-1 p-8">
-            
-          </main> */}
-        </div>
-        
-      </body>
-    </html>
+    <html
+  lang="en"
+  suppressHydrationWarning
+  className={cn("font-sans", geist.variable)} 
+>
+ 
+
+  <body >
+     <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+   
+      <TooltipProvider>
+        <SidebarProvider>
+          <div className="flex min-h-screen ">
+            <AppSidebar />
+
+            <main className="flex-1 px-8 py-2 dark:bg-black text-black dark:text-white ">
+             <div className="flex justify-between"> <SidebarTrigger />
+              <ModeToggle /></div>
+              {children}
+            </main>
+          </div>
+        </SidebarProvider>
+      </TooltipProvider>
+    </ThemeProvider>
+  </body>
+   
+</html>
   );
 }

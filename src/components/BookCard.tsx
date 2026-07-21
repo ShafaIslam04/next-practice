@@ -85,7 +85,7 @@ export default function BookCard({
    book,
 }: BookCardProps) {
   return (
-    <Card className="rounded-3xl border border-violet-100 bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+    <Card className="rounded-3xl border dark:bg-background dark:text-foreground  border-violet-100 bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
       
        <BookImage src={book.image}
          alt={book.title}
