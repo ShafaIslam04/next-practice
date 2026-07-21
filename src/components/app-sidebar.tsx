@@ -3,8 +3,8 @@
 import * as React from "react"
 
 import { NavMain } from "@/components/nav-main"
-import { NavProjects } from "@/components/nav-projects"
-import { NavUser } from "@/components/nav-user"
+// import { NavProjects } from "@/components/nav-projects"
+// import { NavUser } from "@/components/nav-user"
 import { TeamSwitcher } from "@/components/team-switcher"
 import {
   Sidebar,
@@ -30,25 +30,25 @@ const data = {
         <GalleryVerticalEndIcon
         />
       ),
-      plan: "Enterprise",
+      plan: "",
     },
-    {
-      name: "Acme Corp.",
-      logo: (
-        <AudioLinesIcon
-        />
-      ),
-      plan: "Startup",
-    },
-    {
-      name: "Evil Corp.",
-      logo: (
-        <TerminalIcon
-        />
+    // {
+    //   name: "Acme Corp.",
+    //   logo: (
+    //     <AudioLinesIcon
+    //     />
+    //   ),
+    //   plan: "Startup",
+    // },
+    // {
+    //   name: "Evil Corp.",
+    //   logo: (
+    //     <TerminalIcon
+    //     />
         
-      ),
-      plan: "Free",
-    },
+    //   ),
+    //   plan: "Free",
+    // },
   ],
   navMain: [
     {
@@ -207,7 +207,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
         {/* <NavProjects projects={data.projects} /> */}
       </SidebarContent>
       <SidebarFooter>
-        <NavUser user={data.user} />
+        {/* <NavUser user={data.user} /> */}
       </SidebarFooter>
       <SidebarRail />
     </Sidebar>

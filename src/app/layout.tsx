@@ -71,7 +71,7 @@ export default function RootLayout({
             <TooltipProvider>
            <SidebarProvider>
       <AppSidebar />
-      <main className="p-12">
+      <main className="px-8 py-2">
         <SidebarTrigger />
         {children}
       </main>
